@@ -1,0 +1,255 @@
+.Button {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  border-radius: 60px;
+  min-height: 28px;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: .2s;
+  padding: 4px;
+}
+
+.Button__inner {
+  display: flex;
+  width: 100%;
+  border: 2px dashed white;
+  border-radius: 60px;
+  padding: 4px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Button--streched {
+  width: 100%;
+}
+
+.Button__size--circle {
+  display: flex;
+  font-size: 12pt;
+  width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+}
+
+.Button__size--circle .Button__inner {
+  width: 15px;
+  height: 15px;
+}
+
+.Button__size--x {
+  padding: 5px;
+  font-size: 16pt;
+}
+
+.Button__size--l {
+  padding: 6px;
+  font-size: 16pt;
+}
+
+.Button__size--s {
+  padding: 4px;
+  font-size: 12pt;
+}
+
+.Button__size--ss {
+  background: #e9f5fe;
+  color: white;
+  min-width: 70px;
+}
+
+.Button__mode--positive {
+  background: #bae64a;
+  color: #ffffff;
+}
+
+.Button__mode--accent {
+  background: #29abe2;
+  color: #ffffff;
+}
+
+.Button__mode--outline {
+  background: none;
+  color: #29abe2;
+  border: 1px solid #29abe2;
+}
+
+.Button__after {
+  padding-left: 8px;
+}
+
+.Button__before {
+  padding-right: 8px;
+}
+
+.Button__after,
+.Button__children,
+.Button__before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.Button__mode--positive.hover {
+  background: #b0db46;
+}
+
+.Button__mode--positive.active {
+  background: #a9d143;
+}
+
+.Button__mode--accent.hover {
+  background: #2aa4d7;
+}
+
+.Button__mode--accent.active {
+  background: #209cd1;
+}
+
+.Button__mode--accent.disabled,
+.Button__mode--default.disabled {
+  background: #ffffff;
+}
+
+.Button__mode--outline.disabled {
+  border: 1px solid #ddf5ff;
+  color: #ddf5ff;
+}
+
+.Button__mode--outline.hover {
+  background: #2aa4d7;
+}
+
+.Button__mode--outline.active {
+  background: #209cd1;
+}
+
+.Button__badge {
+  display: block;
+  position: absolute;
+  background: #ffaf65;
+  right: 0;
+  top: 0;
+  color: white;
+  padding: 2px 12px;
+  border-radius: 0 0 0 12px;
+  line-height: 8pt;
+  z-index: 4;
+}
+
+/** DEFAULT */
+
+.Button__mode--default {
+  background: #ffffff;
+  color: #970000;
+}
+
+.Button__mode--default._hover {
+  background: #ffffff;
+}
+
+.Button__mode--default._active {
+  background: #ffffff;
+}
+
+/** BLUR */
+
+.Button__mode--blur {
+  background: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: inset 0px 0px 50px rgb(255 255 255 / 30%);
+  color: #ffffff;
+}
+
+.Button__mode--blur._hover {
+  box-shadow: inset 0px 0px 50px rgb(255 255 255 / 45%);
+}
+
+.Button__mode--blur._active {
+  box-shadow: inset 0px 0px 50px rgb(255 255 255 / 60%);
+}
+
+/** BLUE GRADIENT */
+
+.Button__mode--blue_gradient {
+  background: linear-gradient(180deg, #008BEF 0%, #0267C4 100%);
+  color: #ffffff;
+}
+
+.Button__mode--blue_gradient._hover {
+  background: linear-gradient(180deg, #0083e0 0%, #015bb0 100%);
+}
+
+.Button__mode--blue_gradient._active {
+  background: linear-gradient(180deg, #007cd5 0%, #0053a1 100%);
+}
+
+/** GREEN GRADIENT */
+
+.Button__mode--green_gradient .Button__badge {
+  background-color: #0053a1;
+}
+
+.Button__mode--green_gradient {
+  background: linear-gradient(180deg, #01cb52 0%, #029e40 100%);
+  color: #ffffff;
+}
+
+.Button__mode--green_gradient._hover {
+  background: linear-gradient(180deg, #00be4c 0%, #028e3a 100%);
+}
+
+.Button__mode--green_gradient._active {
+  background: linear-gradient(180deg, #01b047 0%, #028034 100%);
+}
+
+/** YELLOW GRADIENT */
+
+.Button__mode--yellow_gradient {
+  background: linear-gradient(180deg, #ee8001 0%, #c67601 100%);
+
+  text-shadow: 1px 1px 2px #a76001;
+  color: #ffffff;
+}
+
+.Button__mode--yellow_gradient._hover {
+  background: linear-gradient(180deg, #e37901 0%, #bb7000 100%);
+}
+
+.Button__mode--yellow_gradient._active {
+  background: linear-gradient(180deg, #d16f00 0%, #ab6600 100%);
+}
+
+.Item__badge {
+  display: flex;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+}
+
+.Item__badge span {
+  display: flex;
+  background-color: rgb(0 117 255);
+  color: white;
+  padding: 2px 12px 4px 12px;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 10pt;
+  font-weight: 500;
+}

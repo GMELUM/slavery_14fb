@@ -1,0 +1,62 @@
+.Currency {
+  display: flex;
+  height: 44px;
+  background-color: white;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 6px;
+  border-radius: 24px;
+}
+
+.Currency__button {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: #da3c78;
+  border-radius: 50%;
+  border: 3px solid #8a0028;
+}
+
+.Currency__button._hover {
+  background-color: #ca336d;
+}
+
+.Currency__button._hover {
+  background-color: #bc2b62;
+}
+
+.Currency__button::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: white;
+  top: 6px;
+  left: 12px;
+}
+
+.Currency__button::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  top: 12px;
+  left: 6px;
+}
+
+.Currency__count {
+  padding: 8px 12px 8px 16px;
+}
+
+.Currency__icons {
+  display: flex;
+  width: 46px;
+  padding: 2px 6px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}

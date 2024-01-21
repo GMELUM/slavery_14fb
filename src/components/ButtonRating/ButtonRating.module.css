@@ -1,0 +1,91 @@
+.ButtonRating {
+  position: relative;
+  background-color: white;
+  padding: 3px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ButtonRating._hover .ButtonRating__booble {
+  opacity: .5;
+}
+
+.ButtonRating._active .ButtonRating__booble {
+  opacity: .2;
+}
+
+.ButtonRating__inner {
+  position: relative;
+  border-radius: 14px;
+  padding: 12px 24px;
+}
+
+.ButtonRating__name {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+.ButtonRating__circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ButtonRating__mode--left .ButtonRating__circle {
+  left: -35px;
+  top: -25px;
+}
+
+.ButtonRating__mode--right .ButtonRating__circle {
+  right: -35px;
+  top: -25px;
+}
+
+.ButtonRating__booble {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: .2s;
+  z-index: 1;
+}
+
+.ButtonRating__booble:nth-child(3) {
+  left: 10%;
+  top: 25%;
+}
+
+.ButtonRating__booble:nth-child(4) {
+  left: 35%;
+  top: 15%;
+}
+
+.ButtonRating__booble:nth-child(5) {
+  left: 50%;
+  top: 10%;
+}
+
+.ButtonRating__booble:nth-child(6) {
+  left: 45%;
+  top: 70%;
+}
+
+.ButtonRating__booble:nth-child(7) {
+  left: 65%;
+  top: 70%;
+}
+
+.ButtonRating__booble:nth-child(8) {
+  left: 85%;
+  top: 30%;
+}

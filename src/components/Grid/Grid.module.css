@@ -1,0 +1,9 @@
+.Grid {
+  display: grid;
+  grid-template-areas:
+  "shop rating";
+    /* "game rating"
+    "game shop"; */
+  padding: 12px 12px;
+  gap: 6px;
+}

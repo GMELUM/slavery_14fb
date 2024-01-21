@@ -1,0 +1,7 @@
+.Div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 6px 12px;
+  box-sizing: border-box;
+}

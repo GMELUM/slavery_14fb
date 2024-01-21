@@ -1,0 +1,8 @@
+.Cells {
+  display: flex;
+  padding: 6px 12px;
+}
+
+.Cells > div:first-child {
+  margin-right: 12px;
+}

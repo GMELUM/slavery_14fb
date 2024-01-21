@@ -1,0 +1,9 @@
+.CardContainer {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 6px;
+  padding: 12px;
+  box-sizing: border-box;
+}

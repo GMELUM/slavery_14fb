@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "scripts": {
+    "start": "vite --config ./config/vite.dev.config.ts",
+    "build": "vite build --config ./config/vite.build.config.ts",
+    "deploy": "git subtree push --prefix builds https://github.com/elum-static/14fb gh-pages"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vkontakte/vk-bridge": "^2.12.2",
+    "elum-router": "^0.0.20",
+    "elum-state": "^0.7.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.9.5",
+    "rollup-plugin-copy": "^3.5.0",
+    "terser": "^5.26.0",
+    "vite": "^5.0.11",
+    "vite-plugin-fast-react-svg": "^0.4.0",
+    "vite-plugin-singlefile": "^0.13.5",
+    "vite-tsconfig-paths": "^4.2.3"
+  },
+  "dependencies": {
+    "react-animated-counter": "^1.7.6"
+  }
+}

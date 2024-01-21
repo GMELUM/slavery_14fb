@@ -1,0 +1,11 @@
+.Footer {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer__inner {
+  width: 50%;
+  max-width: 300px;
+}

@@ -1,0 +1,26 @@
+.BackButton {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+  color: #970000;
+  transition: .24s;
+}
+
+.BackButton__inner {
+  display: flex;
+  width: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.BackButton.active {
+  transform: scale(0.9);
+}
+
+.BackButton.hover {
+  transform: scale(0.95);
+}

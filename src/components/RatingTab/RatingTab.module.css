@@ -1,0 +1,48 @@
+.RatingTab {
+  display: flex;
+  width: 100%;
+  padding: 6px;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.RatingTab__inner {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding: 8px 24px 8px 12px;
+  border-radius: 12px;
+  background-color: white;
+  justify-content: center;
+}
+
+.RatingTab__indicator {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  padding: 0 12px 0 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.RatingTab__indicator span {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #e7e7e7;
+  background-color: #b7b7b7;
+}
+
+.RatingTab--active span {
+  background-color: #ff00e1;
+}
+
+.RatingTab__title {
+  display: flex;
+  font-size: 10pt;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
