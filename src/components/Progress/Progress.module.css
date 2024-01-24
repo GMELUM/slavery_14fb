@@ -59,11 +59,13 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  filter: grayscale(80%);
 }
 
 .Progress--done .Progress__icon {
   -webkit-animation: _pulse_box 2s linear infinite;
   animation: _pulse_box 2s linear infinite;
+  filter: none;
 }
 
 @keyframes _pulse_box {

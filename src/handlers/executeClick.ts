@@ -7,6 +7,13 @@ setInterval(async () => {
   // Накликано на текущий момент
   const value = getter(AWAIT_HEART)
 
+  // нужно обновлять энергию раз в 5 секунд (если по кликам
+  // будет увеличен интервал то нужно создать отдельный таймер по обновлению
+  setter(DATA, (data) => ({
+    ...data,
+    energyCurrent: clamp(data.energyCurrent + 1, 0, data.energyMax)
+  }))
+
   // Если нет кликов то скипаем 
   if (value === 0) {
     return
