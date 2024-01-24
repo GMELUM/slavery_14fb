@@ -28,3 +28,6 @@ export { default as Smile2 } from "./icons/smile_2.svg";
 export { default as Frame } from "./icons/frame.svg";
 export { default as Robot } from "./icons/robot.svg";
 export { default as Hand } from "./icons/hand.svg";
+export { default as Energy } from "./icons/energy.svg";
+export { default as ManyEnergy } from "./icons/many_enegry.svg";
+export { default as Coins } from "./icons/coins.svg";

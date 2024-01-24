@@ -1,23 +1,24 @@
-import { ButtonRating, Grid } from "components";
+import { FC, HTMLAttributes, useMemo } from "react";
+import { useGlobalValue } from "elum-state/react";
+import { DATA } from "engine/state/atoms";
+
 import Clicker from "components/Clicker/Clicker";
-import { useGlobalState } from "elum-state/react";
-import { HEART } from "engine/state/atoms";
-import { FC, HTMLAttributes, useState } from "react";
+import executeClick from "handlers/executeClick";
 
 interface ClickerBlock extends HTMLAttributes<HTMLDivElement> { };
 
 const ClickerBlock: FC<ClickerBlock> = () => {
 
-  const [count, setCount] = useGlobalState(HEART);
+  const value = useGlobalValue(DATA);
 
-  return (
+  const element = useMemo(() => (
     <Clicker
-      onClick={() => {
-        setCount((a) => a + 1)
-      }}
-      // count={count}
+      level={value.levelClick}
+      onClick={executeClick}
     />
-  )
+  ), [value.levelClick])
+
+  return element;
 
 }
 

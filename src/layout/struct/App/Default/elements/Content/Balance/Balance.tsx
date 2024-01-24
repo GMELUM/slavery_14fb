@@ -1,31 +1,44 @@
-import { Progress } from "components";
+import { EnergyCount, Progress } from "components";
 import LineCount from "components/LineCount/LineCount";
 import { useGlobalValue } from "elum-state/react";
-import { HEART } from "engine/state/atoms";
+import { clamp } from "engine";
+import { AWAIT_HEART, DATA } from "engine/state/atoms";
+import executeBox from "handlers/executeBox";
 import { FC, Fragment, HTMLAttributes } from "react";
 import { Heart16 } from "source";
+
+import style from "./Balance.module.css"
 
 interface Balance extends HTMLAttributes<HTMLDivElement> { };
 
 const Balance: FC<Balance> = () => {
 
-  const count = useGlobalValue(HEART);
+  const value = useGlobalValue(DATA);
+  const awaitHeart = useGlobalValue(AWAIT_HEART);
 
   return (
     <Fragment>
 
-      <LineCount
-        count={count}
-        icon={<Heart16 />}
-      />
+      <div className={style.Balance}>
+        <EnergyCount
+          value={clamp(value.energyCurrent - awaitHeart, 0, value.energyMax)}
+          max={value.energyMax}
+        />
+
+        <LineCount
+          count={value.heart + awaitHeart}
+          icon={<Heart16 />}
+        />
+      </div>
+
 
       <Progress
-        value={count}
-        max={1000}
+        value={clamp(value.currentToBox + awaitHeart, 0, value.countToBox)}
+        max={value.countToBox}
+        onClick={executeBox}
       />
 
     </Fragment>
-
   )
 }
 

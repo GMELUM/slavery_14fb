@@ -4,6 +4,18 @@ import { DATA, Data } from "engine/state/atoms";
 const loadData = () => new Promise<Data>((resolve) => {
   setTimeout(() => resolve({
     ...getter(DATA),
+    countToBox: 10,
+    currentToBox: 0,
+
+    kiss: 0,
+    heart: 1000,
+
+    levelClick: 1,
+    robot_mining: 1000,
+
+    energyCurrent: 5000,
+    energyMax: 5000,
+
     rating: {
       clan: [
         {
@@ -195,36 +207,42 @@ const loadData = () => new Promise<Data>((resolve) => {
         type: "valentines_1",
         heart: 99,
         title: "Маленькая валентинка",
+        description: "Игрок, которому ты отправишь эту валентинку, может получить: монеты и тикеты",
         isOver: false
       },
       {
         type: "valentines_2",
         heart: 88,
         title: "Средняя валентинка",
+        description: "Игрок, которому ты отправишь эту валентинку, может получить: монеты, тикеты, супер-снежки или уникального раба",
         isOver: false
       },
       {
         type: "valentines_3",
         heart: 77,
         title: "Большая валентинка",
+        description: "Игрок, которому ты отправишь эту валентинку, может получить: монеты, тикеты, супер-снежки, уникального раба, поцелуи, рамку профиля, смайлик и другие подарки",
         isOver: false
       },
       {
         type: "smile_1",
         heart: 77,
         title: "Смайлик к имени 1",
+        description: "Поставь этот смайлик к имени",
         isOver: false
       },
       {
         type: "smile_2",
         heart: 77,
         title: "Смайлик к имени 2",
+        description: "Поставь этот смайлик к имени",
         isOver: false
       },
       {
         type: "frame",
         kiss: 77,
         title: "Рамка для профиля",
+        description: "Укрась свой аватар красивой рамкой",
         isOver: false
       },
     ],
@@ -233,13 +251,102 @@ const loadData = () => new Promise<Data>((resolve) => {
         type: "auto_mining",
         kiss: 999,
         title: "Авто-майнинг сердец",
-        isOver: false
+        description: "Этот робот будет приносить вам сердца когда вы не в сети",
+        isOver: true
       },
       {
         type: "level_click",
         kiss: 999,
         title: "Уровень клика",
+        description: "Улучшить клик до +5 сердец",
         isOver: false
+      },
+      {
+        type: "level_energy",
+        kiss: 999,
+        title: "Лимит энергии",
+        description: "Увеличить лимит энергии для кликов",
+        isOver: false
+      },
+      {
+        type: "count_energy",
+        kiss: 999,
+        title: "Энергия",
+        description: "Купить энергию (не более лимита энергии)",
+        isOver: false
+      }
+    ],
+    vote: [
+      {
+        type: "product_1",
+        heart: 10,
+        kiss: 1000,
+        price: 1
+      },
+      {
+        type: "product_2",
+        heart: 20,
+        kiss: 2000,
+        price: 2
+      },
+      {
+        type: "product_3",
+        heart: 30,
+        kiss: 3000,
+        price: 3
+      },
+      {
+        type: "product_4",
+        heart: 40,
+        kiss: 4000,
+        price: 4
+      },
+      {
+        type: "product_5",
+        heart: 50,
+        kiss: 5000,
+        price: 5
+      },
+      {
+        type: "product_6",
+        heart: 60,
+        kiss: 6000,
+        price: 6
+      }
+    ],
+    tasks: [
+      {
+        type: "buy_slave",
+        title: "Купить 5 рабов",
+        kiss: 1
+      },
+      {
+        type: "collect_coins",
+        title: "Собрать монеты",
+        kiss: 1
+      },
+      {
+        type: "show_adds",
+        title: "Посмотреть рекламу",
+        badge: "до 5 раз в день",
+        kiss: 1,
+        heart: 10000
+      },
+      {
+        type: "refferal",
+        title: "Пригласить друга в игру",
+        kiss: 1,
+        heart: 100000000
+      },
+      {
+        type: "promo",
+        title: "Промокод на",
+        kiss: 1,
+      },
+      {
+        type: "tasks",
+        title: "Выполняй цели - до ",
+        kiss: 1,
       }
     ]
   }))

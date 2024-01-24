@@ -1,6 +1,5 @@
 import { FC, HTMLAttributes, useState } from "react";
-import { AspectRation, Events, Number, Ratio, Text } from "components";
-import { AnimatedCounter } from 'react-animated-counter';
+import { AnimationLevel, AspectRation, Events } from "components";
 
 import style from "./Clicker.module.css";
 import {
@@ -24,9 +23,12 @@ import {
   Heart18
 } from "source";
 
-interface Clicker extends HTMLAttributes<HTMLDivElement> { };
+interface Clicker extends HTMLAttributes<HTMLDivElement> {
+  level: number;
+};
 
 const Clicker: FC<Clicker> = ({
+  level,
   ...others
 }) => {
 
@@ -69,7 +71,11 @@ const Clicker: FC<Clicker> = ({
   return (
     <Events className={style.Clicker} {...others}>
       <div className={style.Clicker__inner} onClick={handlerClick}>
-        <AspectRation width={1} height={1}>
+        <AspectRation width={1} height={1} style={{ position: "relative" }}>
+
+          <div className={style.Clicker__effect}>
+            <AnimationLevel level={level}/>
+          </div>
 
           <div className={style.Clicker__pulse}>
             <div className={style.Clicker__icon}>

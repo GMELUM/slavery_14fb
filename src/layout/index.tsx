@@ -7,6 +7,7 @@ import bridge from "@vkontakte/vk-bridge";
 import Startup from "./struct/Startup/Startup";
 import App from "./struct/App/App";
 import Popout from "./popout";
+import Modal from "./modal";
 
 interface Layout extends HTMLAttributes<HTMLDivElement> { };
 
@@ -20,7 +21,7 @@ const Layout: FC<Layout> = (props) => {
     <Root
       activeView={activeView}
       popout={<Popout />}
-    // modal={<Modal />}
+      modal={<Modal />}
     >
       <Startup nav={"startup"} />
       <App nav={"app"} />

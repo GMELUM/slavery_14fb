@@ -1,0 +1,54 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding: 26px;
+  font-size: 11pt;
+  font-weight: 500;
+}
+
+.Box__a,
+.Box__b,
+.Box__c,
+.Box__d,
+.Box__e {
+  display: flex;
+  position: absolute;
+  opacity: 0.25;
+}
+
+.Box__a {
+  width: 125px;
+  top: -8px;
+  left: -20px;
+  transform: rotate(45deg);
+}
+
+.Box__b {
+  width: 50px;
+  bottom: 5px;
+  left: -25px;
+  transform: rotate(26deg);
+}
+
+.Box__c {
+  width: 75px;
+  top: -20px;
+  right: 10px;
+  transform: rotate(-20deg);
+}
+
+.Box__d {
+  width: 75px;
+  top: 38%;
+  right: -23px;
+  transform: rotate(-20deg);
+}
+
+.Box__e {
+  width: 150px;
+  bottom: -19px;
+  right: -12px;
+  transform: rotate(-34deg);
+}

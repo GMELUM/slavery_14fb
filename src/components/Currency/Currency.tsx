@@ -8,12 +8,13 @@ interface Currency extends HTMLAttributes<HTMLDivElement> {
 };
 
 const Currency: FC<Currency> = ({
-  count
+  count,
+  ...others
 }) => {
 
   return (
-    <div className={style.Currency}>
-      <Events className={style.Currency__button}>
+    <div className={style.Currency} {...others}>
+      <Events className={style.Currency__button} >
         <span>
           <span />
           <span />

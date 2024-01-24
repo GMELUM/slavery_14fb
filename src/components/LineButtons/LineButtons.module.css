@@ -1,0 +1,22 @@
+.LineButtons {
+  display: flex;
+  width: 100%;
+}
+
+.LineButtons__inner {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.LineButtons__element {
+  display: flex;
+  width: 100%;
+}
+
+.LineButtons__element:not(:last-child) {
+  margin: 0 12px 0 0;
+}

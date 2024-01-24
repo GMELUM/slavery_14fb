@@ -1,7 +1,9 @@
 import { FC, HTMLAttributes, useEffect, useState } from "react";
 
-import style from "./Progress.module.css";
 import { Present } from "source";
+import { classes } from "engine";
+
+import style from "./Progress.module.css";
 
 interface Progress extends HTMLAttributes<HTMLDivElement> {
   value: number;
@@ -15,6 +17,7 @@ const getPercent = (value: number, max: number) => {
 const Progress: FC<Progress> = ({
   value,
   max,
+  onClick,
   ...others
 }) => {
 
@@ -30,7 +33,9 @@ const Progress: FC<Progress> = ({
   }
 
   return (
-    <div className={style.Progress} {...others}>
+    <div className={classes(style.Progress, {
+      [style["Progress--done"]]: value >= max
+    })} {...others}>
       <div className={style.Progress__inner}>
         <div className={style.Progress__title}>
           <span>{value}</span>
@@ -39,7 +44,7 @@ const Progress: FC<Progress> = ({
         <div className={style.Progress__indicator}>
           <span style={styleIndicator} />
         </div>
-        <div className={style.Progress__icon} >
+        <div className={style.Progress__icon} onClick={onClick}>
           <Present />
         </div>
       </div>

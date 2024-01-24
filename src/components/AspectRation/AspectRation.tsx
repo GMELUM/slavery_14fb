@@ -19,7 +19,8 @@ const AspectRation: FC<IAspectRation> = ({
   before,
   after,
 
-  children
+  children,
+  ...others
 }) => {
 
   const container = useRef<HTMLDivElement>(null);
@@ -51,7 +52,7 @@ const AspectRation: FC<IAspectRation> = ({
   useLayoutEffect(handlerResize, [width, height]);
 
   return (
-    <div ref={container} className={style.AspectRation}>
+    <div ref={container} className={style.AspectRation} {...others}>
       {/* <div className={style.AspectRation__before}>{before}</div> */}
       <div style={{ width: w, height: h }}>
         {children}

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   border: 0;
-  border-radius: 60px;
+  border-radius: 12px;
   min-height: 28px;
   max-width: 100%;
   flex-wrap: nowrap;
@@ -19,14 +19,18 @@
 .Button__inner {
   display: flex;
   width: 100%;
-  border: 2px dashed white;
+  /* border: 2px dashed white; */
   border-radius: 60px;
   padding: 4px;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+.Button._disabled {
+  background-color: #e7e7e7;
 }
 
 .Button--streched {
@@ -73,14 +77,14 @@
 }
 
 .Button__mode--accent {
-  background: #29abe2;
+  background: #ea3843;
   color: #ffffff;
 }
 
 .Button__mode--outline {
   background: none;
-  color: #29abe2;
-  border: 1px solid #29abe2;
+  color: #ea3843;
+  border: 1px solid #ea3843;
 }
 
 .Button__after {

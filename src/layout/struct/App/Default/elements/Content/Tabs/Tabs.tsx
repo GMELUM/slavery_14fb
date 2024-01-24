@@ -7,10 +7,10 @@ interface Tabs extends HTMLAttributes<HTMLDivElement> { };
 const Tabs: FC<Tabs> = () => {
 
   const handlerShop = () =>
-    nextPage({ panel: "shop" });
+    nextPage({ panel: "shop", stay: "shop" });
 
   const handlerRating = () =>
-    nextPage({ panel: "rating" })
+    nextPage({ panel: "rating", stay: "rating" });
 
   return (
     <Grid>

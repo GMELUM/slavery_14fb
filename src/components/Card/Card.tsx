@@ -14,7 +14,9 @@ import {
   Heart16,
   Kiss,
   Robot,
-  Hand
+  Hand,
+  Energy,
+  ManyEnergy
 } from "source";
 
 const images = {
@@ -25,7 +27,9 @@ const images = {
   "smile_2": <Smile2 />,
   "frame": <Frame />,
   "auto_mining": <Robot />,
-  "level_click": <Hand />
+  "level_click": <Hand />,
+  "level_energy": <Energy />,
+  "count_energy": <ManyEnergy />
 } as Record<string, JSX.Element>;
 
 interface ICardContainer extends HTMLAttributes<HTMLDivElement> {

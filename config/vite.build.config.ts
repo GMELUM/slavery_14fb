@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import { OutputOptions } from "rollup";
 
 import { version } from "../package.json";
-import { compilerOptions } from "./tsconfig.json";
+import { compilerOptions } from "../tsconfig.json";
 
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";

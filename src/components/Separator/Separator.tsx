@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from "react";
 import { classes } from "engine";
 
-import style from "./Separator.module.css";
+import styles from "./Separator.module.css";
 
 interface Separator extends HTMLAttributes<HTMLDivElement> {
   size?: "x" | "l" | "m";
@@ -17,20 +17,23 @@ const Separator: FC<Separator> = ({
   right = "0",
   bottom = "2px",
   left = "0",
+  style,
   ...others
 }) => {
 
   return (
     <div
-      className={classes(style.Separator, {
-        [style["Separator--size-x"]]: size === "x",
-        [style["Separator--size-l"]]: size === "l",
-        [style["Separator--size-m"]]: size === "m"
+      {...others}
+      className={classes(styles.Separator, {
+        [styles["Separator--size-x"]]: size === "x",
+        [styles["Separator--size-l"]]: size === "l",
+        [styles["Separator--size-m"]]: size === "m"
       })}
       style={{
-        "padding": `${top} ${right} ${bottom} ${left}`
-      }}>
-      <span />
+        "padding": `${top} ${right} ${bottom} ${left}`,
+      }}
+    >
+      <span style={style} />
     </div>
   )
 

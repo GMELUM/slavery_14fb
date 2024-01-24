@@ -40,7 +40,7 @@ export default defineConfig({
   },
   build: {
     target: "esnext",
-    outDir: path.join(dir, v),
+    outDir: path.join(dir),
     minify: "terser",
     rollupOptions: {
       output: output

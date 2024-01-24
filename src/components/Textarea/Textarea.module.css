@@ -1,0 +1,29 @@
+.Textarea {
+  width: 100%;
+  padding: 12px 12px 0 12px;
+}
+
+.Textarea textarea {
+  padding: 8px 12px;
+  height: 39px;
+  max-height: 120px;
+  min-width: 0;
+  resize: none;
+  width: 100%;
+  background: #efefef;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  color: #000000;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.Textarea textarea::placeholder {
+  font-weight: 500;
+  color: #c5c5c5;
+  opacity: 1;
+}

@@ -17,13 +17,17 @@ const Navigate: FC<Navigate> = () => {
     backPage({ ignoreFreeze: true, toStay: "app" });
   }
 
+  const handleShop = () => nextPage({
+    modal: "shop"
+  })
+
   return (
     <Cells>
       <Notify
         show={value.notification}
         onClick={handlerNotify}
       />
-      <Currency count={27} />
+      <Currency count={value.kiss} onClick={handleShop} />
     </Cells>
   )
 }
