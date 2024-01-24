@@ -8,6 +8,7 @@ import { FC, Fragment, HTMLAttributes } from "react";
 import { Heart16 } from "source";
 
 import style from "./Balance.module.css"
+import { nextPage } from "elum-router/react";
 
 interface Balance extends HTMLAttributes<HTMLDivElement> { };
 
@@ -16,10 +17,14 @@ const Balance: FC<Balance> = () => {
   const value = useGlobalValue(DATA);
   const awaitHeart = useGlobalValue(AWAIT_HEART);
 
+  const handlerClick = () => nextPage({
+    modal: "shop"
+  })
+
   return (
     <Fragment>
 
-      <div className={style.Balance}>
+      <div className={style.Balance} onClick={handlerClick}>
         <EnergyCount
           value={clamp(value.energyCurrent - awaitHeart, 0, value.energyMax)}
           max={value.energyMax}

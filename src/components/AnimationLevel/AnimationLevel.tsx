@@ -8,7 +8,7 @@ interface Element {
   show: boolean;
 }
 
-const initialElements: Element[] = Array.from({ length: 20 }, (_, index) => ({
+const initialElements: Element[] = Array.from({ length: 10 }, (_, index) => ({
   id: index,
   x: 0,
   y: 0,

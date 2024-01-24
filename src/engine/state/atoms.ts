@@ -7,6 +7,7 @@ export type Tasks = {
   badge?: string
   kiss?: number;
   heart?: number;
+  energy?: number;
 }
 
 export type VoteList = Vote[];

@@ -347,6 +347,11 @@ const loadData = () => new Promise<Data>((resolve) => {
         type: "tasks",
         title: "Выполняй цели - до ",
         kiss: 1,
+      },
+      {
+        type: "energy",
+        title: "Энергия за просмотр рекламы",
+        energy: 1000,
       }
     ]
   }))

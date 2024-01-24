@@ -7,7 +7,7 @@ import {
 } from "components";
 
 import style from "./Item.module.css";
-import { Heart16, Kiss } from "source";
+import { Energy, Heart16, Kiss } from "source";
 
 interface Item extends HTMLAttributes<HTMLDivElement> {
   count?: number;
@@ -16,6 +16,7 @@ interface Item extends HTMLAttributes<HTMLDivElement> {
 
   kiss?: number;
   heart?: number;
+  energy?: number;
 };
 
 const Item: FC<Item> = ({
@@ -24,6 +25,7 @@ const Item: FC<Item> = ({
   badge,
   kiss,
   heart,
+  energy,
   children,
   ...prevProps
 }) => {
@@ -44,6 +46,10 @@ const Item: FC<Item> = ({
             {!!heart && <div className={style.Item__element}>
               <span>{heart}</span>
               <Heart16 />
+            </div>}
+            {!!energy && <div className={style.Item__element}>
+              <span>{energy}</span>
+              <Energy />
             </div>}
           </div>
 

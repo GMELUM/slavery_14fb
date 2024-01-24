@@ -108,6 +108,7 @@ const Shop: FC<Shop> = () => {
 
             kiss={elem.kiss}
             heart={elem.heart}
+            energy={elem.energy}
 
             badge={elem.badge}
             onClick={() => handlerTask(elem)}
