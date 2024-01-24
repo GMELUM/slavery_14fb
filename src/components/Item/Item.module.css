@@ -17,6 +17,7 @@
   display: flex;
   width: 100%;
   height: 100%;
+  min-height: 60px;
   padding: 8px;
   border: 2px solid #ffdcec;
   background: #fff7fb;

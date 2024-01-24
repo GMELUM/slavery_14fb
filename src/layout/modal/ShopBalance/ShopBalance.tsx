@@ -32,13 +32,13 @@ const images = {
   "level_energy": <Energy />
 } as Record<string, JSX.Element>;
 
-// import style from "./ShopHeart.module.css";
+// import style from "./ShopBalance.module.css";
 
-interface ShopHeart extends HTMLAttributes<HTMLDivElement> {
+interface ShopBalance extends HTMLAttributes<HTMLDivElement> {
   nav: string
 };
 
-const ShopHeart: FC<ShopHeart> = () => {
+const ShopBalance: FC<ShopBalance> = () => {
 
   const value = useGlobalValue(DATA);
 
@@ -74,17 +74,42 @@ const ShopHeart: FC<ShopHeart> = () => {
         />
 
         <GroupHeader
-          title={"Выполняй задания"}
-          description={"Получить поцелуи за выполнение заданий и просмотр рекламы"}
+          title={"Покупай за голоса"}
+          description={"Купить энергию и сердца за голоса"}
         />
 
-        {value.tasks && value.tasks.map((elem) => (
+        {value.vote.map((elem, index) => elem.group === "balance" && (
+          <VoteItem
+            key={`voteitem_${index}`}
+            heart={elem.heart}
+            kiss={elem.kiss}
+            energy={elem.energy}
+            price={elem.price}
+            onClick={() => handlerVote(elem)}
+          />
+        ))}
+
+        <Separator
+          size={"l"}
+          top={"12px"}
+          style={{
+            background: "#f1f1f1"
+          }}
+        />
+
+        <GroupHeader
+          title={"Выполняй задания"}
+          description={"Получить энергию и сердца за выполнение заданий и просмотр рекламы"}
+        />
+
+        {value.tasks && value.tasks.map((elem) => elem.group === "balance" && (
           <Item
             key={elem.type}
             title={elem.title}
 
             kiss={elem.kiss}
             heart={elem.heart}
+            energy={elem.energy}
 
             badge={elem.badge}
             onClick={() => handlerTask(elem)}
@@ -96,4 +121,4 @@ const ShopHeart: FC<ShopHeart> = () => {
   )
 }
 
-export default ShopHeart;
+export default ShopBalance;

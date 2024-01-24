@@ -78,9 +78,9 @@ const Shop: FC<Shop> = () => {
           description={"Купить поцелуи за голоса"}
         />
 
-        {value.vote.map((elem, index) => (
+        {value.vote.map((elem, index) => elem.group === "general" && (
           <VoteItem
-            key={`voteitem_index`}
+            key={`voteitem_${index}`}
             heart={elem.heart}
             kiss={elem.kiss}
             price={elem.price}
@@ -101,7 +101,7 @@ const Shop: FC<Shop> = () => {
           description={"Получить поцелуи за выполнение заданий и просмотр рекламы"}
         />
 
-        {value.tasks && value.tasks.map((elem) => (
+        {value.tasks && value.tasks.map((elem) => elem.group === "general" && (
           <Item
             key={elem.type}
             title={elem.title}

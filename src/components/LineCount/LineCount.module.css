@@ -1,6 +1,6 @@
 .LineCount {
   display: flex;
-  padding: 0 12px;
+  padding: 0 12px 0 0;
   box-sizing: border-box;
   width: 100%;
   font-weight: 700;
@@ -9,7 +9,6 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  z-index: 3;
 }
 
 .LineCount__icon {

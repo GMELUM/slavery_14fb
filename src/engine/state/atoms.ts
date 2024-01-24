@@ -3,6 +3,7 @@ import { atom } from "elum-state/react";
 export type TasksList = Tasks[];
 export type Tasks = {
   type: string;
+  group: "general" | "balance";
   title: string;
   badge?: string
   kiss?: number;
@@ -18,10 +19,14 @@ export type Vote = {
   "product_3" |
   "product_4" |
   "product_5" |
-  "product_6";
+  "product_6" |
+  string;
+
+  group: "general" | "balance";
 
   heart?: number;
   kiss?: number;
+  energy?: number | string;
 
   price: number;
 };
@@ -89,6 +94,8 @@ export type Data = {
   energyCurrent: number;
   energyMax: number;
 
+  isPresent: boolean;
+
   heart: number;
   kiss: number;
   tasks: TasksList;
@@ -110,19 +117,35 @@ export const AWAIT_HEART = atom({ key: "heart_balance", default: 0 });
 export const DATA = atom<Data>({
   key: "data",
   default: {
+    // уведомления
     notification: true,
+    //сколько нужно для получения бокса 
     countToBox: 0,
+    // сколько сейчас есть кликов до бокса
     currentToBox: 0,
+    // уровень прокачки клика, 1 уровень +1 к клику
     levelClick: 1,
+    // Показываем что робот нафармил для нас сердца (показывает модалку при входе)
     robot_mining: 0,
+    // сколько есть энергии для кликов
     energyCurrent: 0,
+    // сколько максимум может быть энергии
     energyMax: 0,
+    // кол-во сердец
     heart: 0,
+    // кол-во поцелуев
     kiss: 0,
+    // определяет можно лди забрать подарки
+    isPresent: false,
+    // магазин
     shop: [],
+    // улучшения
     improve: [],
+    // магазин за голоса
     vote: [],
+    // задания
     tasks: [],
+    // рейтинг
     rating: {
       clan: [],
       users: {

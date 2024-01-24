@@ -1,3 +1,59 @@
 .Balance {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0 12px 0 60px;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #161616;
+}
+
+.Currency__button {
+  position: absolute;
+  left: 12px;
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #535353;
+}
+
+
+.Currency__button._hover {
+  background-color: #ca336d;
+}
+
+.Currency__button._hover {
+  background-color: #bc2b62;
+}
+
+.Currency__button::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #000000;
+  top: 6px;
+  left: 12px;
+}
+
+.Currency__button::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #000000;
+  top: 12px;
+  left: 6px;
+}
+
+.Balance__progress {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 12px 0 0;
 }

@@ -16,6 +16,8 @@ const loadData = () => new Promise<Data>((resolve) => {
     energyCurrent: 5000,
     energyMax: 5000,
 
+    isPresent: true,
+
     rating: {
       clan: [
         {
@@ -279,54 +281,81 @@ const loadData = () => new Promise<Data>((resolve) => {
     vote: [
       {
         type: "product_1",
+        group: "general",
         heart: 10,
         kiss: 1000,
         price: 1
       },
       {
         type: "product_2",
+        group: "general",
         heart: 20,
         kiss: 2000,
         price: 2
       },
       {
         type: "product_3",
+        group: "general",
         heart: 30,
         kiss: 3000,
         price: 3
       },
       {
         type: "product_4",
+        group: "general",
         heart: 40,
         kiss: 4000,
         price: 4
       },
       {
         type: "product_5",
+        group: "general",
         heart: 50,
         kiss: 5000,
         price: 5
       },
       {
         type: "product_6",
+        group: "general",
         heart: 60,
         kiss: 6000,
         price: 6
+      },
+      {
+        type: "product_7",
+        group: "balance",
+        energy: "1000",
+        price: 6
+      },
+      {
+        type: "product_8",
+        group: "balance",
+        energy: "полная",
+        price: 10
+      },
+      {
+        type: "product_9",
+        group: "balance",
+        heart: 1000000000,
+        price: 100
       }
     ],
     tasks: [
       {
         type: "buy_slave",
+        group: "general",
         title: "Купить 5 рабов",
         kiss: 1
       },
       {
         type: "collect_coins",
+        group: "general",
         title: "Собрать монеты",
         kiss: 1
       },
       {
         type: "show_adds",
+        group: "general",
         title: "Посмотреть рекламу",
         badge: "до 5 раз в день",
         kiss: 1,
@@ -334,24 +363,40 @@ const loadData = () => new Promise<Data>((resolve) => {
       },
       {
         type: "refferal",
+        group: "general",
         title: "Пригласить друга в игру",
         kiss: 1,
-        heart: 100000000
+        heart: 100000000000
       },
       {
         type: "promo",
+        group: "general",
         title: "Промокод на",
         kiss: 1,
       },
       {
         type: "tasks",
+        group: "general",
         title: "Выполняй цели - до ",
         kiss: 1,
       },
       {
         type: "energy",
+        group: "balance",
         title: "Энергия за просмотр рекламы",
         energy: 1000,
+      },
+      {
+        type: "refferal_energy",
+        group: "balance",
+        title: "Пригласи друга",
+        energy: 1000,
+      },
+      {
+        type: "stories",
+        group: "balance",
+        title: "Опубликовать историю",
+        heart: 10000000,
       }
     ]
   }))

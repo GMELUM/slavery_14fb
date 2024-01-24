@@ -6,17 +6,19 @@ import {
 import style from "./VoteItem.module.css";
 
 import { decWord } from "engine";
-import { Heart16, Kiss } from "source";
+import { Energy, Heart16, Kiss } from "source";
 
 interface VoteItem extends HTMLAttributes<HTMLDivElement> {
   heart?: number;
   kiss?: number;
+  energy?: number | string;
   price: number;
 };
 
 const VoteItem: FC<VoteItem> = ({
   heart,
   kiss,
+  energy,
   price,
   children,
   ...prevProps
@@ -32,6 +34,9 @@ const VoteItem: FC<VoteItem> = ({
               </div>}
               {heart && <div className={style.VoteItem__value}>
                 {heart} <Heart16 />
+              </div>}
+              {energy && <div className={style.VoteItem__value}>
+                {energy} <Energy />
               </div>}
             </div>
           </div>

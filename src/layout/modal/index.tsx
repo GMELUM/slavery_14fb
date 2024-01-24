@@ -8,6 +8,8 @@ import Shop from './Shop/Shop';
 import Box from './Box/Box';
 import Robot from './Robot/Robot';
 import HowToPlay from './HowToPlay/HowToPlay';
+import ShopBalance from './ShopBalance/ShopBalance';
+import Presents from './Presents/Presents';
 
 interface Modals extends HTMLAttributes<HTMLDivElement> { };
 
@@ -25,6 +27,8 @@ const Modals: FC<Modals> = ({ }) => {
       <Box nav={"box"} />
       <Robot nav={"robot"} />
       <HowToPlay nav={"how_to_play"} />
+      <ShopBalance nav={"shop_balance"} />
+      <Presents nav={"present"} />
 
     </Modal>
   )

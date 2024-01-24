@@ -1,0 +1,58 @@
+.Presents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.Presents__icon {
+  width: 150px;
+  height: 150px;
+}
+
+.Presents__title {
+  font-size: 14pt;
+  font-weight: 600;
+  text-align: center;
+}
+
+.Presents__list {
+  display: flex;
+  padding: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Presents__padding {
+  padding: 2px;
+}
+
+.Presents__item {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: 4px solid #e7e7e7;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.Presents__itemIcon {
+  width: 50px;
+  padding: 5px;
+}
+
+.Presents__price {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: flex-end;
+  padding: 4px 4px 0 4px;
+  font-size: 10pt;
+  font-weight: 600;
+}
