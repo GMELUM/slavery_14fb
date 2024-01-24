@@ -16,10 +16,14 @@ import {
   Robot,
   Hand,
   Energy,
-  ManyEnergy
+  ManyEnergy,
+  Snowball,
+  SuperSnowball
 } from "source";
 
 const images = {
+  "snowball": <Snowball />,
+  "super_snowball": <SuperSnowball />,
   "valentines_1": <Valentines1 />,
   "valentines_2": <Valentines2 />,
   "valentines_3": <Valentines3 />,

@@ -31,3 +31,5 @@ export { default as Hand } from "./icons/hand.svg";
 export { default as Energy } from "./icons/energy.svg";
 export { default as ManyEnergy } from "./icons/many_enegry.svg";
 export { default as Coins } from "./icons/coins.svg";
+export { default as Snowball } from "./icons/snowball.svg";
+export { default as SuperSnowball } from "./icons/super_snowball.svg"

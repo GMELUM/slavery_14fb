@@ -36,6 +36,14 @@ const executeBox = () => new Promise<boolean>((resolve) => {
   // Получаем ответ от сервера
   const response: ItemList = [
     {
+      type: "super_snowball",
+      count: 5
+    },
+    {
+      type: "snowball",
+      count: 10
+    },
+    {
       type: "coin",
       count: 1000000000
     },

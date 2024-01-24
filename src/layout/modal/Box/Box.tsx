@@ -17,10 +17,14 @@ import {
   Present,
   Kiss,
   Coins,
-  Heart16
+  Heart16,
+  Snowball,
+  SuperSnowball
 } from "source";
 
 const images = {
+  "snowball": <Snowball />,
+  "super_snowball": <SuperSnowball />,
   "heart": <Heart16 />,
   "coin": <Coins />,
   "kiss": <Kiss />,
