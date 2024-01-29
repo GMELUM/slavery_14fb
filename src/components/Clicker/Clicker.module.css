@@ -31,6 +31,16 @@
   box-sizing: border-box;
   transition: .1s;
   z-index: 2;
+  color: rgba(255, 255, 255, 0.03);
+  transform: translate3d(0, 0, 1px);
+}
+
+.Clicker__spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 ._active .Clicker__icon {

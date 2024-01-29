@@ -1,5 +1,5 @@
-import { FC, HTMLAttributes, useState } from "react";
-import { AnimationLevel, AspectRation, Events } from "components";
+import { FC, HTMLAttributes, MouseEventHandler, useState } from "react";
+import { AnimationLevel, AspectRation, Events, Spinner } from "components";
 
 import style from "./Clicker.module.css";
 import {
@@ -25,14 +25,17 @@ import {
 
 interface Clicker extends HTMLAttributes<HTMLDivElement> {
   level: number;
+  active: boolean;
 };
 
 const Clicker: FC<Clicker> = ({
   level,
+  active,
+  onClick,
   ...others
 }) => {
 
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
 
   const icons = [
     <Heart1 />,
@@ -64,22 +67,29 @@ const Clicker: FC<Clicker> = ({
     }
   }
 
-  const handlerClick = () => {
+  const handlerClick: MouseEventHandler<HTMLDivElement> = (event) => {
     setIndex(rand(1, 17, index))
+    if (active && onClick) {
+      onClick(event)
+    }
   }
 
   return (
-    <Events className={style.Clicker} {...others}>
-      <div className={style.Clicker__inner} onClick={handlerClick}>
+    <Events className={style.Clicker} onClick={handlerClick} {...others}>
+      <div className={style.Clicker__inner}>
         <AspectRation width={1} height={1} style={{ position: "relative" }}>
 
           <div className={style.Clicker__effect}>
-            <AnimationLevel level={level}/>
+            <AnimationLevel level={active ? level : 0} />
           </div>
 
           <div className={style.Clicker__pulse}>
             <div className={style.Clicker__icon}>
-              {icons[index]}
+              {active && icons[index]}
+              {!active &&
+                <div className={style.Clicker__spinner}>
+                  <Spinner size={"large"} />
+                </div>}
             </div>
             <div className={style.Clicker__gradient} />
           </div>

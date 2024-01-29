@@ -6,13 +6,15 @@ interface Element {
   x: number;
   y: number;
   show: boolean;
+  level: number;
 }
 
 const initialElements: Element[] = Array.from({ length: 10 }, (_, index) => ({
   id: index,
   x: 0,
   y: 0,
-  show: false
+  show: false,
+  level: 0
 }));
 
 interface AnimationLevel extends HTMLAttributes<HTMLDivElement> {
@@ -24,16 +26,19 @@ const AnimationLevel: React.FC<AnimationLevel> = ({ level }) => {
   const lastUsedElement = useRef<number>(-1);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const nextIndex = (lastUsedElement.current + 1) % elements.length;
-    const updatedElements = [...elements];
-    updatedElements[nextIndex] = {
-      x: e.nativeEvent.offsetX,
-      y: e.nativeEvent.offsetY,
-      id: Date.now(),
-      show: true
-    };
-    setElements(updatedElements);
-    lastUsedElement.current = nextIndex;
+    if (level) {
+      const nextIndex = (lastUsedElement.current + 1) % elements.length;
+      const updatedElements = [...elements];
+      updatedElements[nextIndex] = {
+        x: e.nativeEvent.offsetX,
+        y: e.nativeEvent.offsetY,
+        id: Date.now(),
+        show: true,
+        level: level
+      };
+      setElements(updatedElements);
+      lastUsedElement.current = nextIndex;
+    }
   };
 
   return (
@@ -49,7 +54,7 @@ const AnimationLevel: React.FC<AnimationLevel> = ({ level }) => {
             opacity: element.show ? "1" : "0"
           }}
         >
-          +{level}
+          +{element.level}
         </div>
       ))}
     </div>
