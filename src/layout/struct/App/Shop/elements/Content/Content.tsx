@@ -38,12 +38,12 @@ const Content: FC<Content> = () => {
 
       {value.improve && value.improve.map((elem) =>
         <Div
+          key={`improve_${elem.type} + ${elem.isOver}`}
           top={"12px"}
           left={"12px"}
           right={"12px"}
         >
           <Card
-            key={`improve_${elem.type} + ${elem.isOver}`}
             mode={"horizontal"}
             title={elem.title}
             image={elem.type}
