@@ -1,0 +1,13 @@
+.Warning {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.Warning__inner {
+    background: #1e1e1e;
+    color: #dddddd;
+    padding: 12px 24px;
+    border-radius: 12px;
+}

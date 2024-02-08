@@ -35,6 +35,7 @@ export { default as GroupHeader } from "./GroupHeader/GroupHeader";
 export { default as AnimationLevel } from "./AnimationLevel/AnimationLevel";
 export { default as EnergyCount } from "./EnergyCount/EnergyCount";
 export { default as Present } from "./Present/Present";
+export { default as Warning } from "./Warning/Warning";
 
 export { default as CardContainer } from "./CardContainer/CardContainer";
 export { default as Card } from "./Card/Card";

@@ -1,4 +1,4 @@
-import { Line, RatingTab, Separator } from "components";
+import { Line, RatingTab, Separator, Warning } from "components";
 import RatingSubTab from "components/RatingSubTab/RatingSubTab";
 import { FC, Fragment, HTMLAttributes, useState } from "react";
 import Day from "./Day/Day";
@@ -13,6 +13,10 @@ const Users: FC<Users> = () => {
 
   return (
     <Fragment>
+
+      <Warning>
+        Участник, занявший первое место в ежедневном рейтинге, получает 50 миллионов монет и уникальную рамку профиля. Второе и третье место - 10 миллионов монет
+      </Warning>
 
       <Line>
 

@@ -1,4 +1,4 @@
-import { CellUser } from "components";
+import { CellUser, Warning } from "components";
 import { useGlobalValue } from "elum-state/react";
 import { formatNumber } from "engine";
 import { DATA, Data } from "engine/state/atoms";
@@ -16,6 +16,11 @@ const Clan: FC<Clan> = () => {
 
   return (
     <Fragment>
+
+      <Warning>
+      Клан, занявший первое место по итогам месяца, получает фонд на 1 миллиард монет для конкурса. Второе и третье место - 500 миллионов монет
+      </Warning>
+
       {rating.clan.map(({
         name,
         image,
