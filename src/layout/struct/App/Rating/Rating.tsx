@@ -12,7 +12,6 @@ const Rating: FC<Rating> = ({
 }) => {
   return (
     <Panel
-      fixed
       nav={nav}
       header={<Header />}
       safeBottom={true}
