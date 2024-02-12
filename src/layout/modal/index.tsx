@@ -13,7 +13,7 @@ import Presents from './Presents/Presents';
 
 interface Modals extends HTMLAttributes<HTMLDivElement> { };
 
-const Modals: FC<Modals> = ({ }) => {
+const Modals: FC<Modals> = () => {
 
   const modal = useRouter("modal");
 

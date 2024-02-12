@@ -35,7 +35,9 @@ const Modal: FC<Modal> = ({
 
   useEffect(() => {
 
-    if (!store.anim) {
+    // console.log(store, activeModal)
+
+    // if (!store.anim) {
 
       //* Открытие модалки */
       if (!store.active && !!activeModal) {
@@ -73,7 +75,7 @@ const Modal: FC<Modal> = ({
         return;
       }
 
-    }
+    // }
   }, [activeModal])
 
   const handlerSwap = (event: any) => {

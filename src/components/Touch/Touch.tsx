@@ -86,9 +86,9 @@ const Touch: FC<ITouch> = ({
         const { isPressed, isX, isY, startX, startY } = motion;
         if (isPressed) {
 
-            if (!!event.touches && event.touches.length > 1) {
-                return End(event);
-            }
+            // if (!!event.touches && event.touches.length > 1) {
+            //     return End(event);
+            // }
 
             const shiftX = coordX(event) - (startX || 0);
             const shiftY = coordY(event) - (startY || 0);
@@ -150,25 +150,14 @@ const Touch: FC<ITouch> = ({
         onClick && onClick(event);
     }
 
-    function onDragStart(event: any) {
-        // const target = event.target as HTMLElement;
-        // if (target.tagName === 'A' || target.tagName === 'IMG') {
-        //     event.preventDefault();
-        // }
-    };
-
-    // const getRef: RefCallback<HTMLElement> = (c) => { container.current = c! }
-
     const propsEvent = isTouchSupport ? {
         onClick: onclick,
-        onDragStart: onDragStart,
         onTouchStart: Start,
         onTouchMove: Move,
         onTouchEnd: End,
         onTouchCancel: End
     } : {
         onClick: onclick,
-        onDragStart: onDragStart,
         onMouseDown: Start,
         onMouseMove: Move,
         onMouseUp: End,
