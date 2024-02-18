@@ -35,17 +35,21 @@ const PanelHeader: FC<IPanelHeader> = ({
     [style["PanelHeader--border"]]: border,
     [style["PanelHeader--padding"]]: padding
   })}>
-    <div className={style.PanelHeader__before}>
-      {(string || substring) && (
-        <>
-          <div className={style.PanelHeader__title}>{string}</div>
-          <div className={style.PanelHeader__description}>{substring}</div>
-        </>
-      )}
-      {before && before}
-    </div>
+    {((string || substring) || (before)) && (
+      <div className={style.PanelHeader__before}>
+        {(string || substring) && (
+          <>
+            <div className={style.PanelHeader__title}>{string}</div>
+            <div className={style.PanelHeader__description}>{substring}</div>
+          </>
+        )}
+        {before && before}
+      </div>
+    )}
+
     <div className={style.PanelHeader__content}>{children}</div>
-    <div className={style.PanelHeader__after}></div>
+
+    {vkma && <div className={style.PanelHeader__after}></div>}
   </div>
 );
 

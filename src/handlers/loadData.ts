@@ -18,6 +18,28 @@ const loadData = () => new Promise<Data>((resolve) => {
 
     isPresent: true,
 
+    specialOffer: {
+      items: [
+        {
+          type: "heart",
+          count: 2500
+        },
+        {
+          type: "energy",
+          count: 5000
+        },
+        {
+          type: "auto_mining",
+          count: 1
+        },
+        {
+          type: "kiss",
+          count: 10000
+        }
+      ],
+      price: 69
+    },
+
     rating: {
       clan: [
         {

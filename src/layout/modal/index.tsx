@@ -10,6 +10,7 @@ import Robot from './Robot/Robot';
 import HowToPlay from './HowToPlay/HowToPlay';
 import ShopBalance from './ShopBalance/ShopBalance';
 import Presents from './Presents/Presents';
+import SpecialOffer from './SpecialOffer/SpecialOffer';
 
 interface Modals extends HTMLAttributes<HTMLDivElement> { };
 
@@ -29,6 +30,7 @@ const Modals: FC<Modals> = () => {
       <HowToPlay nav={"how_to_play"} />
       <ShopBalance nav={"shop_balance"} />
       <Presents nav={"present"} />
+      <SpecialOffer nav={"special_offer"} />
 
     </Modal>
   )

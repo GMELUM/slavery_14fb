@@ -1,4 +1,5 @@
 import { atom } from "elum-state/react";
+import { ItemList } from "handlers/executePresent";
 
 export type TasksList = Tasks[];
 export type Tasks = {
@@ -95,6 +96,11 @@ export type Data = {
   energyMax: number;
 
   isPresent: boolean;
+
+  specialOffer?: {
+    items: ItemList;
+    price: number;
+  };
 
   heart: number;
   kiss: number;

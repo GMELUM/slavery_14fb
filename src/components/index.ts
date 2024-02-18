@@ -41,3 +41,4 @@ export { default as CardContainer } from "./CardContainer/CardContainer";
 export { default as Card } from "./Card/Card";
 
 export { default as ButtonRating } from "./ButtonRating/ButtonRating";
+export { default as SpecialOffer } from "./SpecialOffer/SpecialOffer";
