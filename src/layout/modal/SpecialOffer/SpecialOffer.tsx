@@ -1,9 +1,9 @@
-import { FC, HTMLAttributes, useState } from "react";
-import { Button, Line, LineButtons, ModalPanel, Text, Textarea } from "components";
+import { FC, HTMLAttributes } from "react";
+import { Button, LineButtons, ModalPanel } from "components";
 
-import { backPage, nextPage, useParams } from "elum-router/react";
+import { backPage, nextPage } from "elum-router/react";
 
-import { DATA, Goods, Improve } from "engine/state/atoms";
+import { DATA } from "engine/state/atoms";
 import executeProduct from "handlers/executeProduct";
 
 import {

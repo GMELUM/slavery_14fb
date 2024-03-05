@@ -13,7 +13,7 @@ const loadData = () => new Promise<Data>((resolve) => {
     levelClick: 1,
     robot_mining: 1000,
 
-    energyCurrent: 10,
+    energyCurrent: 5000,
     energyMax: 5000,
 
     isPresent: true,

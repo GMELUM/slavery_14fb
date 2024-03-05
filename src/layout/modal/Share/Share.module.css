@@ -1,0 +1,27 @@
+.Share__info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 12px 0 24px 0;
+}
+
+.Share__icon {
+    width: 150px;
+    height: 150px;
+    padding: 12px;
+}
+
+.Share__title {
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+.Share__description {
+    padding: 0 12px;
+    text-align: center;
+    font-size: 11pt;
+    color: #858585;
+}

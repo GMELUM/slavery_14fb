@@ -1,6 +1,12 @@
+import { nextPage } from "elum-router/react";
 import { getter, setter } from "elum-state/react";
 import { clamp } from "engine";
 import { AWAIT_HEART, DATA } from "engine/state/atoms";
+
+const cache = {
+  isDone: false,
+  count: 0
+}
 
 setInterval(async () => {
 
@@ -63,6 +69,11 @@ const executeClickl = () => {
 
   const data = getter(DATA)
   const level = data.levelClick
+
+  if (!cache.isDone && ++cache.count > 10) {
+    cache.isDone = true;
+    nextPage({ modal: "share" });
+  }
 
   setter(AWAIT_HEART, (count) => {
     return count + level

@@ -11,6 +11,7 @@ import HowToPlay from './HowToPlay/HowToPlay';
 import ShopBalance from './ShopBalance/ShopBalance';
 import Presents from './Presents/Presents';
 import SpecialOffer from './SpecialOffer/SpecialOffer';
+import Share from './Share/Share';
 
 interface Modals extends HTMLAttributes<HTMLDivElement> { };
 
@@ -31,6 +32,7 @@ const Modals: FC<Modals> = () => {
       <ShopBalance nav={"shop_balance"} />
       <Presents nav={"present"} />
       <SpecialOffer nav={"special_offer"} />
+      <Share nav={"share"} />
 
     </Modal>
   )
