@@ -1,12 +1,13 @@
 import { FC, HTMLAttributes, MouseEventHandler } from "react";
 import { Button, LineButtons, ModalPanel } from "components";
 
-import { backPage, nextPage } from "elum-router/react";
+import { ACTIVE_MODAL, backPage, nextPage } from "elum-router/react";
 
 import { Heart16 } from "source";
 import executeShare from "handlers/executeShare";
 
 import style from "./Share.module.css";
+import { setter } from "elum-state/react";
 
 interface Share extends HTMLAttributes<HTMLDivElement> {
     nav: string
@@ -15,7 +16,8 @@ interface Share extends HTMLAttributes<HTMLDivElement> {
 const Share: FC<Share> = () => {
 
     const hacdlerClick: MouseEventHandler<HTMLButtonElement> = async () => {
-        nextPage({ module: "share", freeze: true });
+
+        // nextPage({ module: "how_to_play" });
         await executeShare();
     }
 

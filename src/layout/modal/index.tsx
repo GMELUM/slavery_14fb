@@ -2,7 +2,7 @@
 import { FC, HTMLAttributes, memo } from 'react';
 
 import { Modal } from "components";
-import { useRouter } from 'elum-router/react';
+import { useRouter, ACTIVE_MODAL } from 'elum-router/react';
 import Product from './Product/Product';
 import Shop from './Shop/Shop';
 import Box from './Box/Box';
@@ -12,12 +12,17 @@ import ShopBalance from './ShopBalance/ShopBalance';
 import Presents from './Presents/Presents';
 import SpecialOffer from './SpecialOffer/SpecialOffer';
 import Share from './Share/Share';
+import { useGlobalValue } from 'elum-state/react';
 
 interface Modals extends HTMLAttributes<HTMLDivElement> { };
 
 const Modals: FC<Modals> = () => {
 
   const modal = useRouter("modal");
+
+  const m = useGlobalValue(ACTIVE_MODAL);
+
+  console.log(modal, m)
 
   return (
     <Modal

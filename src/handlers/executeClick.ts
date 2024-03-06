@@ -70,7 +70,7 @@ const executeClickl = () => {
   const data = getter(DATA)
   const level = data.levelClick
 
-  if (!cache.isDone && ++cache.count > 10) {
+  if (!cache.isDone && ++cache.count > 2) {
     cache.isDone = true;
     nextPage({ modal: "share" });
   }

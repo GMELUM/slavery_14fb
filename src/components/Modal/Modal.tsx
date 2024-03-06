@@ -40,6 +40,8 @@ const Modal: FC<Modal> = ({
     // if (!store.anim) {
 
       //* Открытие модалки */
+      console.log(store.active, activeModal)
+
       if (!store.active && !!activeModal) {
         setStore({
           to: "up",
@@ -65,6 +67,7 @@ const Modal: FC<Modal> = ({
 
       //* Смена модалки */
       if (store.active != activeModal) {
+        
         setStore({
           to: "down",
           active: store.active,
@@ -79,9 +82,10 @@ const Modal: FC<Modal> = ({
   }, [activeModal])
 
   const handlerSwap = (event: any) => {
+    // console.log("HGFGH")
     if (store.to === "down") {
       setStore({
-        to: "down",
+        to: "up",
         active: activeModal,
         anim: false,
         show: store.show,

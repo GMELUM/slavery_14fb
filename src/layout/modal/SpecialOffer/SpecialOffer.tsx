@@ -78,8 +78,8 @@ const SpecialOffer: FC<SpecialOffer> = () => {
         </div>
 
         <div className={style.SpecialOffer__list}>
-          {value.specialOffer?.items && value.specialOffer?.items.length > 0 && value.specialOffer?.items.map((item) => (
-            <div className={style.SpecialOffer__padding}>
+          {value.specialOffer?.items && value.specialOffer?.items.length > 0 && value.specialOffer?.items.map((item, index) => (
+            <div className={style.SpecialOffer__padding} key={index}>
               <div className={style.SpecialOffer__item}>
                 <div className={style.SpecialOffer__itemIcon}>
                   {images[item.type]}
